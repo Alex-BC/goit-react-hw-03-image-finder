@@ -21,13 +21,24 @@ class Modal extends Component {
             }
     }
 
+    handleBackdropClick = event => {
+        // console.log('Клик в бекдорп');
+
+        // console.log('currentTarget: ', event.currentTarget);
+        // console.log('target: ', event.target);
+
+        if (event.currentTarget === event.target) {
+            this.props.onClose();
+        }
+    }
+
 
     render() {
-        return createPortal(<div className="Overlay">
-                <div className="Modal">
-                    <img src="" alt="" />{this.props.children}
-                </div>
-            </div>, modalRoot,);
+        return createPortal(<div className="Overlay" onClick={this.handleBackdropClick}>
+                                <div className="Modal">
+                                    <img src="" alt="" />{this.props.children}
+                                </div>
+                            </div>, modalRoot,);
     }
 
 }
