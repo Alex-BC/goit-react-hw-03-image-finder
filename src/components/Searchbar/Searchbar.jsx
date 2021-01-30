@@ -4,23 +4,23 @@ import { toast } from 'react-toastify';
 
 export default class Searchbar extends Component {
     state = {
-    image: "",
+    imageName: "",
     }
 
     handleNameChange = event => {
-        this.setState({ image: event.currentTarget.value.toLowerCase() });
+        this.setState({ imageName: event.currentTarget.value.toLowerCase() });
     }
 
     handleSubmit = event => {
         event.preventDefault();
 
-        if (this.state.image.trim() === "") {
+        if (this.state.imageName.trim() === "") {
             return toast.error("Введите название картинки!");
             
         }
 
-        this.props.onSubmit(this.state.image);
-        this.setState({image: ''})
+        this.props.onSubmit(this.state.imageName);
+        this.setState({imageName: ''})
     }
 
     render() {
@@ -37,7 +37,7 @@ export default class Searchbar extends Component {
                     autoComplete="off"
                     autoFocus
                     placeholder="Search images and photos"
-                    value={this.state.image}
+                    value={this.state.imageName}
                     onChange={this.handleNameChange}
                     />
                 </form>

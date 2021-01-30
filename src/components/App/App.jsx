@@ -3,15 +3,15 @@ import { ToastContainer} from 'react-toastify';
 // import Modal from '../Modal/Modal';
 // import './styles.css';
 import Searchbar from '../Searchbar/Searchbar';
-import ImageGalleryItem from "../ImageGalleryItem/ImageGalleryItem";
+import ImagesInfo from "../ImageInfo/ImageInfo";
 
 export default class App extends Component {
     state = {
-        image: '',
+        imageName: '',
     }
 
-    handleFormSubmit = image => {
-        this.setState({image})
+    handleFormSubmit = imageName => {
+        this.setState({imageName});
     }
 
     // state = {
@@ -43,7 +43,7 @@ export default class App extends Component {
                 <ToastContainer />
 
                 <Searchbar onSubmit={this.handleFormSubmit} />
-                <ImageGalleryItem image={this.state.image} />
+                <ImagesInfo imageName={this.state.imageName} />
                 {/* {this.state.image && (<div>{this.state.image.hits[1].previewURL}</div>)} */}
                 {/* <button type="button" onClick={this.toggleModal} className="Button">
                     Открыть
