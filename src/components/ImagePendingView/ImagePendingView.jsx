@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import Loader from 'react-loader-spinner';
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 
 export default class ImagePendingView extends Component {
   render() {
     return (
+      
       <Loader
         className="Loader"
         type="Oval"
