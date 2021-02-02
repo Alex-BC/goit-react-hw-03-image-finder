@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
-import imagesAPI  from '../services/images-api';
+// import imagesAPI  from '/Projects/GitHub/goit-react-hw-03-image-finder/src/services/images-api';
+import imagesAPI  from '/Projects/GitHub/goit-react-hw-03-image-finder/src/services/images-api';
 import ImagesErrorView from '../ImagesErrorView/ImagesErrorView';
 import ImagePendingView from '../ImagePendingView/ImagePendingView';
 import ImageGallery from '../ImageGallery/ImageGallery';

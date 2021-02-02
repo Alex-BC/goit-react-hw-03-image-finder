@@ -11,10 +11,10 @@ export default class Button extends Component {
     this.props.onClick();
     setTimeout(() => {
       window.scrollBy({
-        top: document.documentElement.clientHeight - 130,
+        top: document.documentElement.scrollHeight,
         behavior: 'smooth',
       });
-    }, 500);
+    }, 1000);
   };
 
   render() {
